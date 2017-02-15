@@ -4,7 +4,7 @@
 #include <conio.h>
 #include <iostream>
 int main(){
-int d,s=0;
+int d,p,s;
 int k=true;
 	printf ("Введите срок вклада: ");
 	std::cin>>d;
@@ -32,7 +32,25 @@ int k=true;
 					}
 				}
 			}
-			if(d)
+			if(d>=0 && d<=30){
+				p=s-s*0.1;
+				printf ("Сумма годового дохода: %d р. \n",p);
+			}
+			
+			if(d>=31 && d<=120){
+				p=s+s*0.02;
+				printf ("Сумма годового дохода: %d р. \n",p);
+			}
+			
+			if(d>=121 && d<=240){
+				p=s+s*0.06;
+				printf ("Сумма годового дохода: %d р. \n",p);
+			}
+			
+			if(d>=241 && d<=365){
+				p=s+s*0.12;
+				printf ("Сумма годового дохода: %d р. \n",p);
+			}
 system("pause");
 return 0;
 }
